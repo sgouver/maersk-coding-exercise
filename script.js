@@ -1,55 +1,6 @@
-
-
 const shuffleButton = document.querySelector("#shuffle_btn");
 const sortButton = document.querySelector("#sort_btn");
-
-/* var cards = [
-    {
-        "value" : 1,
-        "title" : "1",
-        "color" : "#6F98A8"
-    },
-    {
-        "value" : 2,
-        "title" : "2",
-        "color" : "#2B8EAD"
-    },
-    {
-        "value" : 3,
-        "title" : "3",
-        "color" : "#2F454E"
-    },
-    {
-        "value" : 4,
-        "title" : "4",
-        "color" : "#2B8EAD"
-    },        
-    {
-        "value" : 5,
-        "title" : "5",
-        "color" : "#2F454E"
-    },
-    {
-        "value" : 6,
-        "title" : "6",
-        "color" : "#BFBFBF"
-    },
-    {
-        "value" : 7,
-        "title" : "7",
-        "color" : "#BFBFBF"
-    },
-    {
-        "value" : 8,
-        "title" : "8",
-        "color" : "#6F98A8"
-    },
-    {
-        "value" : 9,
-        "title" : "9",
-        "color" : "#2F454E"
-    }
-]; */
+const main = document.getElementById("main");
 
 let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -68,15 +19,22 @@ const sortArray = () => {
     cards.sort();
 };
 
+const assignArray = array => {
+    main.innerHTML = "";
+
+    array.forEach(item => {
+        main.innerHTML += `<span class="item item-${item}">${item}</span>`;
+    })
+}
+
 shuffleButton.addEventListener("click",  () => {
     shuffleArray(cards);
-
-    console.log(cards);
+    assignArray(cards);
 });
 
 sortButton.addEventListener("click",  () => {
     sortArray();
-
-    console.log(cards);
-
+    assignArray(cards);
 });
+
+assignArray(cards);
