@@ -32,3 +32,7 @@ Colours used in this design:
 - CSS utilised the CSS Grid format since the insrtuctions do not require support for the IE11
 - The mobile view is triggered only for devices of 375px or lower as per intructions
 - The desktop view has a maimum width of 960px as it was understood by the provided mockup
+
+## Live view
+
+The project is on GitHub Pages an can be found [here](https://sgouver.github.io/ui-engineer-coding-exercise/).
