@@ -1,6 +1,6 @@
 const shuffleButton = document.querySelector("#shuffle_btn");
 const sortButton = document.querySelector("#sort_btn");
-const main = document.getElementById("main");
+const main = document.querySelector("#main");
 
 let cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 

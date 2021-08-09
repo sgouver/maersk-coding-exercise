@@ -1,35 +1,22 @@
-header {
-    grid-area: header;
-    font-size: 1.4rem;
+@font-face {
+    font-family: "Ubundu Regular";
+    src: url(/fonts/UbuntuMono-Regular.ttf);
 }
 
-main {
-    grid-area: main;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;;
-    justify-items: center;
-    justify-content: center;  
+@font-face {
+    font-family: "Roboto Regular";
+    src: url(/fonts/Roboto-Regular.ttf);
 }
 
-/* .item {
-
-}
- */
-aside {
-    grid-area: sidebar;
-}
-
-footer {
-    grid-area: footer;
-    font-size: .9rem;
+@font-face {
+    font-family: "Roboto Italic";
+    src: url(/fonts/Roboto-Italic.ttf);
 }
 
 .container {
     display: grid;
-    width: 960px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 960px;
+    margin: 25px auto 0 auto;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-items: center;
@@ -40,3 +27,82 @@ footer {
       "footer footer footer";
 }
 
+header {
+    font-family: "Roboto Regular";
+    color: #000000;
+    grid-area: header;
+    margin: 15px;
+    font-size: 1.4rem;
+}
+
+main {
+    grid-area: main;
+    border-top: 5px solid #BFBFBF;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 100%;
+}
+
+.item {
+    font-size: 6rem;
+    aspect-ratio: 1;
+    font-family: "Ubundu Regular";
+    color: #FFFFFF;
+    justify-self: stretch;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+.item-1, .item-8 {
+    background-color:#6F98A8;
+}
+
+.item-2, .item-4 {
+    background-color: #2B8EAD;
+}
+
+.item-6, .item-7 {
+    background-color: #BFBFBF;
+}
+
+.item-3, .item-5, .item-9 {
+    background-color: #2F454E;
+}
+
+aside {
+    grid-area: sidebar;    
+    border-top: 5px solid #BFBFBF;
+    background-color: #EFEFEF;
+    justify-self: stretch;
+    text-align: center;
+}
+
+aside button {
+    cursor: pointer;
+    background-color: #72C3DC;
+    color: #FFFFFF;
+    border: none;
+    border-bottom: 4px solid #2B8EAD;
+    border-radius: 10px;
+    display: block;
+    width: 80%;
+    height: 45px;
+    margin: 25px auto 25px auto;
+}
+
+aside button:hover {
+    border-bottom: 2px solid #2B8EAD;
+}
+
+footer {
+    font-family: "Roboto Italic";
+    color: #000000;
+    padding-top: 15px;
+    grid-area: footer;
+    height: 75px;
+    font-size: .9rem;
+    background-color: #EFEFEF;
+    justify-self: stretch;
+    text-align: center;
+}
