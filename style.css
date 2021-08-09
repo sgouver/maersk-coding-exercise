@@ -1,3 +1,4 @@
+/* Added fonts close to the provided mockups */
 @font-face {
     font-family: "Ubundu Regular";
     src: url(/fonts/UbuntuMono-Regular.ttf);
@@ -144,7 +145,7 @@
     }
 }
 
-
+/* Added fonts close to the provided mockups */
 header {
     font-family: "Roboto Regular";
     grid-area: header;
@@ -177,13 +178,13 @@ aside button {
     background-color: #72C3DC;
     color: #FFFFFF;
     border: none;
-    border-bottom: 4px solid #2B8EAD;
+    border-bottom: 5px solid #2B8EAD;
     border-radius: 10px;
     height: 45px;
 }
 
 aside button:hover {
-    border-bottom: 2px solid #2B8EAD;
+    border-bottom: 3px solid #2B8EAD;
 }
 
 footer {
