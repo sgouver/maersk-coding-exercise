@@ -184,6 +184,10 @@ aside button {
 }
 
 aside button:hover {
+    background-color: #79cee7;
+}
+
+aside button:active {
     border-bottom: 3px solid #2B8EAD;
 }
 

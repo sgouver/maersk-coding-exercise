@@ -19,8 +19,8 @@ const shuffleArray = array => {
 };
 
 //Sort function to sort on ascending order
-const sortArray = () => {
-    cards.sort();
+const sortArray = (array) => {
+    array.sort();
 };
 
 //Function for the DOM manipulation
@@ -40,7 +40,7 @@ shuffleButton.addEventListener("click",  () => {
 
 //Listen to the Sort button and execute the array sorting and DOM restructure
 sortButton.addEventListener("click",  () => {
-    sortArray();
+    sortArray(cards);
     assignArray(cards);
 });
 
