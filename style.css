@@ -13,67 +13,161 @@
     src: url(/fonts/Roboto-Italic.ttf);
 }
 
-.container {
-    display: grid;
-    max-width: 960px;
-    margin: 25px auto 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    justify-items: center;
-    justify-content: center;    
-    grid-template-areas: 
-      "header header header"
-      "main  main sidebar"
-      "footer footer footer";
+/* Mobile Specific CSS */
+@media only screen and (max-width: 376px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0;
+        grid-template-rows: .2fr .5fr 3fr .3fr;
+        justify-items: center;
+        justify-content: center;    
+        grid-template-areas: 
+          "header"
+          "sidebar"
+          "main"
+          "footer";
+    }
+
+    header {
+        color: #FFFFFF;
+        background-color: #333333;
+    }
+
+    aside button {
+        display: inline-block;
+        width: 100px;
+        margin: 10px auto 10px auto;
+    }
+
+    main {
+        display: grid;
+        width: 88%;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+        row-gap: 6px;
+    }
+
+    .item {
+        color: #000000;
+        font-size: 1.3rem;
+        background-color: #EFEFEF;
+        height: 45px;
+    }
+
+    .item-1, .item-8 {
+        border-left: 10px solid #6F98A8;
+    }
+    
+    .item-2, .item-4 {
+        border-left: 10px solid #2B8EAD;
+    }
+    
+    .item-6, .item-7 {
+        border-left: 10px solid #BFBFBF;
+    }
+    
+    .item-3, .item-5, .item-9 {
+        border-left: 10px solid #2F454E;
+    }
+
+    footer {
+        margin-top: 25px;
+    }
 }
+
+/* Desktop Specific CSS */
+@media only screen and (min-width: 376px) {
+    .container {
+        display: grid;
+        max-width: 960px;
+        margin: 25px auto 0 auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        justify-items: center;
+        justify-content: center;    
+        grid-template-areas: 
+          "header header header"
+          "main  main sidebar"
+          "footer footer footer";
+    }
+
+    header {
+        color: #000000;
+    }
+
+    aside {
+        border-top: 5px solid #BFBFBF;
+        background-color: #EFEFEF;
+    }
+
+    aside button {
+        display: block;
+        width: 80%;
+        margin: 25px auto 25px auto;
+    }
+
+    main {
+        border-top: 5px solid #BFBFBF;
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+    .item {    
+        font-size: 6rem;
+        aspect-ratio: 1;
+        color: #FFFFFF;
+    }
+
+    .item-1, .item-8 {
+        background-color: #6F98A8;
+    }
+    
+    .item-2, .item-4 {
+        background-color: #2B8EAD;
+    }
+    
+    .item-6, .item-7 {
+        background-color: #BFBFBF;
+    }
+    
+    .item-3, .item-5, .item-9 {
+        background-color: #2F454E;
+    }
+
+    footer {
+        background-color: #EFEFEF;
+        padding-top: 15px;
+        height: 75px;
+    }
+}
+
 
 header {
     font-family: "Roboto Regular";
-    color: #000000;
     grid-area: header;
-    margin: 15px;
+    width: 100%;
+    line-height: 60px;    
     font-size: 1.4rem;
+    text-align: center;
 }
 
 main {
     grid-area: main;
-    border-top: 5px solid #BFBFBF;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    width: 100%;
 }
 
 .item {
-    font-size: 6rem;
-    aspect-ratio: 1;
     font-family: "Ubundu Regular";
-    color: #FFFFFF;
     justify-self: stretch;
     display: flex;
     justify-content: center;
-    align-items: center;}
-
-.item-1, .item-8 {
-    background-color:#6F98A8;
-}
-
-.item-2, .item-4 {
-    background-color: #2B8EAD;
-}
-
-.item-6, .item-7 {
-    background-color: #BFBFBF;
-}
-
-.item-3, .item-5, .item-9 {
-    background-color: #2F454E;
+    align-items: center;
 }
 
 aside {
     grid-area: sidebar;    
-    border-top: 5px solid #BFBFBF;
-    background-color: #EFEFEF;
     justify-self: stretch;
     text-align: center;
 }
@@ -85,10 +179,7 @@ aside button {
     border: none;
     border-bottom: 4px solid #2B8EAD;
     border-radius: 10px;
-    display: block;
-    width: 80%;
     height: 45px;
-    margin: 25px auto 25px auto;
 }
 
 aside button:hover {
@@ -98,11 +189,8 @@ aside button:hover {
 footer {
     font-family: "Roboto Italic";
     color: #000000;
-    padding-top: 15px;
     grid-area: footer;
-    height: 75px;
     font-size: .9rem;
-    background-color: #EFEFEF;
     justify-self: stretch;
     text-align: center;
 }
