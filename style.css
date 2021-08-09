@@ -99,15 +99,16 @@
     }
 
     aside {
+        padding-top: 15px;
         border-top: 5px solid #BFBFBF;
         background-color: #EFEFEF;
     }
 
     aside button {
         display: block;
-        height: 45px;
+        height: 60px;
         width: 80%;
-        margin: 25px auto 25px auto;
+        margin: 24px auto 24px auto;
     }
 
     main {
@@ -179,9 +180,9 @@ aside button {
     cursor: pointer;
     background-color: #72C3DC;
     color: #FFFFFF;
-    border: none;
-    border-bottom: 5px solid #2B8EAD;
     border-radius: 10px;
+    border: none;
+    border-bottom: 6px solid #2B8EAD;
 }
 
 aside button:hover {
@@ -189,7 +190,7 @@ aside button:hover {
 }
 
 aside button:active {
-    border-bottom: 3px solid #2B8EAD;
+    border-bottom: 4px solid #2B8EAD;
 }
 
 footer {
