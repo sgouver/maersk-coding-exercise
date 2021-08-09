@@ -180,7 +180,7 @@ aside button {
     border: none;
     border-bottom: 5px solid #2B8EAD;
     border-radius: 10px;
-    height: 45px;
+    padding: 15px;
 }
 
 aside button:hover {
