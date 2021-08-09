@@ -83,14 +83,14 @@
         display: grid;
         max-width: 960px;
         margin: 25px auto 0 auto;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
         justify-items: center;
         justify-content: center;    
         grid-template-areas: 
-          "header header header"
-          "main  main sidebar"
-          "footer footer footer";
+          "header header header header"
+          "main  main main sidebar"
+          "footer footer footer footer";
     }
 
     header {
@@ -150,7 +150,7 @@ header {
     font-family: "Roboto Regular";
     grid-area: header;
     width: 100%;
-    line-height: 60px;    
+    line-height: 50px;    
     font-size: 1.4rem;
     text-align: center;
 }
